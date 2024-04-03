@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real or Fake News Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .result {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .subheading {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text {
+            font-weight: normal;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show-more {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleText() {
+            var moreText = document.getElementById("moreText");
+            var buttonText = document.getElementById("toggleButton");
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+                buttonText.innerHTML = "Show Less";
+            } else {
+                moreText.style.display = "none";
+                buttonText.innerHTML = "Show More";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Real or Fake News Detection</h1>
+        <p class="subheading">The text you entered:</p>
+        <button id="toggleButton" class="show-more" onclick="toggleText()">Show More</button>
+        <p id="moreText" class="hidden">{{ text }}</p>
+        <p class="subheading">The model predicts that this text is:</p>
+        <p class="result">{{ result }}</p>
+    </div>
+</body>
+</html>
