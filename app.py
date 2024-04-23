@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from joblib import load
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer, WordNetLemmatizer
