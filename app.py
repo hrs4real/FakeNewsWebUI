@@ -7,6 +7,7 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 import string
 
 nltk.download('stopwords')
+nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
